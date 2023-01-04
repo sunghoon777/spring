@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    //스프링 모듈
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.0.2.RELEASE'
+    //스프링이 AOP 를 구현할 때 사용하는 모듈
+    implementation 'org.aspectj:aspectjrt:1.9.8'
+    implementation 'org.aspectj:aspectjweaver:1.9.8'
+}
+
+test {
+    useJUnitPlatform()
+}
